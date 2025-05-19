@@ -49,8 +49,8 @@ const Analyzer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-resume-primary mb-4">Resume Analyzer</h1>
-            <p className="text-xl text-gray-600">
+            <h1 className="text-4xl font-bold text-resume-primary dark:text-white mb-4">Resume Analyzer</h1>
+            <p className="text-xl text-gray-600 dark:text-gray-300">
               Upload your resume, choose a target job, and get AI-powered analysis and recommendations
             </p>
           </div>
@@ -65,16 +65,16 @@ const Analyzer = () => {
               </div>
             </div>
             
-            <Card className="bg-resume-light p-6 text-center">
+            <Card className="bg-resume-light dark:bg-gray-800 p-6 text-center">
               <Button 
-                className="bg-resume-primary hover:bg-resume-primary/90 px-8"
+                className="bg-resume-primary hover:bg-resume-primary/90 dark:bg-resume-secondary dark:hover:bg-resume-secondary/90 px-8"
                 size="lg"
                 onClick={handleAnalyze}
                 disabled={!file || analyzing}
               >
                 {analyzing ? 'Analyzing...' : 'Analyze Resume'}
               </Button>
-              <p className="text-sm text-gray-500 mt-3">
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-3">
                 We'll analyze your resume against the selected job requirements
               </p>
             </Card>

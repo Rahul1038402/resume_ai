@@ -63,30 +63,30 @@ const ResumeUploader = ({ onFileSelected }: ResumeUploaderProps) => {
 
   return (
     <Card 
-      className={`p-8 border-2 border-dashed ${isDragging ? 'border-resume-secondary bg-resume-light' : 'border-gray-300'} rounded-lg transition-colors`}
+      className={`p-8 border-2 border-dashed ${isDragging ? 'border-resume-secondary bg-resume-light dark:bg-gray-800/50' : 'border-gray-300 dark:border-gray-700'} rounded-lg transition-colors dark:bg-gray-800`}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
     >
       <div className="text-center">
         <div className="mb-6">
-          <div className="w-16 h-16 mx-auto bg-resume-light rounded-full flex items-center justify-center">
-            <FileUp className="h-8 w-8 text-resume-primary" />
+          <div className="w-16 h-16 mx-auto bg-resume-light dark:bg-gray-700 rounded-full flex items-center justify-center">
+            <FileUp className="h-8 w-8 text-resume-primary dark:text-resume-secondary" />
           </div>
         </div>
         
-        <h3 className="text-lg font-medium mb-2">
+        <h3 className="text-lg font-medium mb-2 dark:text-white">
           {fileName ? 'Resume Uploaded' : 'Upload Your Resume'}
         </h3>
         
-        <p className="text-sm text-gray-500 mb-4">
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
           {fileName || 'Drop your PDF or DOCX file here, or click to browse'}
         </p>
         
         <div className="relative">
           <Button 
             variant="outline" 
-            className="relative"
+            className="relative dark:border-gray-700 dark:text-gray-300 dark:hover:bg-gray-700"
             onClick={() => {
               const fileInput = document.getElementById('resume-file-input');
               if (fileInput) fileInput.click();
@@ -105,11 +105,11 @@ const ResumeUploader = ({ onFileSelected }: ResumeUploaderProps) => {
         
         {fileName && (
           <div className="mt-4 flex items-center justify-center">
-            <div className="text-sm bg-resume-light rounded-full px-3 py-1 flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-resume-primary mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="text-sm bg-resume-light dark:bg-gray-700 rounded-full px-3 py-1 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-resume-primary dark:text-resume-secondary mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              <span>{fileName}</span>
+              <span className="dark:text-gray-300">{fileName}</span>
             </div>
           </div>
         )}
