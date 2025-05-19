@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { toast } from "sonner";
+import { FileUp } from "lucide-react";
 
 interface ResumeUploaderProps {
   onFileSelected: (file: File) => void;
@@ -61,7 +62,8 @@ const ResumeUploader = ({ onFileSelected }: ResumeUploaderProps) => {
   };
 
   return (
-    <Card className={`p-8 border-2 border-dashed ${isDragging ? 'border-resume-secondary bg-resume-light' : 'border-gray-300'} rounded-lg transition-colors`}
+    <Card 
+      className={`p-8 border-2 border-dashed ${isDragging ? 'border-resume-secondary bg-resume-light' : 'border-gray-300'} rounded-lg transition-colors`}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
       onDrop={handleDrop}
@@ -69,9 +71,7 @@ const ResumeUploader = ({ onFileSelected }: ResumeUploaderProps) => {
       <div className="text-center">
         <div className="mb-6">
           <div className="w-16 h-16 mx-auto bg-resume-light rounded-full flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-resume-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-            </svg>
+            <FileUp className="h-8 w-8 text-resume-primary" />
           </div>
         </div>
         
@@ -83,15 +83,23 @@ const ResumeUploader = ({ onFileSelected }: ResumeUploaderProps) => {
           {fileName || 'Drop your PDF or DOCX file here, or click to browse'}
         </p>
         
-        <div className="file-input-wrapper relative">
-          <Button variant="outline" className="relative z-10">
+        <div className="relative">
+          <Button 
+            variant="outline" 
+            className="relative"
+            onClick={() => {
+              const fileInput = document.getElementById('resume-file-input');
+              if (fileInput) fileInput.click();
+            }}
+          >
             {fileName ? 'Change File' : 'Browse Files'}
           </Button>
           <input 
+            id="resume-file-input"
             type="file" 
-            accept=".pdf,.docx" 
+            accept=".pdf,.docx,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document" 
             onChange={handleFileChange}
-            className="absolute inset-0 opacity-0 cursor-pointer"
+            className="hidden"
           />
         </div>
         
