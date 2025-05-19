@@ -5,8 +5,7 @@ import { Separator } from "@/components/ui/separator";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-
-// Import this from ResumeResults instead of redefining it
+export type { AnalysisResult } from './ResumeResults'; // Re-export
 import { AnalysisResult } from "./ResumeResults";
 
 interface ResumeResultsProps {
