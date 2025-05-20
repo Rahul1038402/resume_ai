@@ -1,9 +1,10 @@
-
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import ResumeUploader from "@/components/ResumeUploader";
 import JobSelector from "@/components/JobSelector";
-import { ResumeResults, AnalysisResult } from "@/components/FixedResumeResults";
+import ResumeResults from "@/components/ResumeResults";
+import { AnalysisResult } from "@/types/analysis";
+import FixedResumeResults from "@/components/FixedResumeResults";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { analyzeResume } from "@/services/resumeApi";
