@@ -107,3 +107,25 @@
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   @apply bg-gray-400 dark:bg-gray-500;
 }
+
+.animate-pulse-slow {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Dark mode support */
+.dark {
+  --resume-primary: #60a5fa;
+  --resume-secondary: #3b82f6;
+  --resume-light: #1e293b;
+}
+
+:root {
+  --resume-primary: #2563eb;
+  --resume-secondary: #1d4ed8;
+  --resume-light: #f0f9ff;
+}
