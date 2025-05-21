@@ -67,9 +67,12 @@ debug.log
 *.sqlite3
 *.db
 
-# SpaCy Models (large binary files)
+# Virtual Environment
+.venv/
+venv/
+
+# SpaCy Models
 **/models/
-!**/models/*.json  # Keep config files
 
 # Uploaded Files (if storing locally)
 uploads/
