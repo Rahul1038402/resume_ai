@@ -67,7 +67,7 @@ debug.log
 *.sqlite3
 *.db
 
-# Virtual Environment
+# Virtual environments
 .venv/
 venv/
 
