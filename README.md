@@ -1,7 +1,5 @@
 # 🧠 Resume Analyzer AI
 
-![alt text](<Screenshot (11).png>)
-
 An intelligent resume analysis system that evaluates resumes against target job requirements using NLP and provides actionable feedback.
 
 ---
