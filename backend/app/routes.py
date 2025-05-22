@@ -1,18 +1,15 @@
 import io
-from flask import request, jsonify
+from flask import Blueprint, request, jsonify
 from app.analyzer import ResumeAnalyzer
-from app import create_app
 
-
-app = create_app()
+routes = Blueprint('routes', __name__)
 analyzer = ResumeAnalyzer()
 
-@app.route('/', methods=['GET'])
+@routes.route('/', methods=['GET'])
 def home():
     return "Resume AI backend is running!"
 
-
-@app.route('/analyze', methods=['POST'])
+@routes.route('/analyze', methods=['POST'])
 def analyze_resume():
     if 'file' not in request.files:
         return jsonify({"error": "No file uploaded"}), 400

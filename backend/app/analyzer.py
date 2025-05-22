@@ -1,5 +1,3 @@
-# backend/app/analyzer.py
-
 import spacy
 import re
 import fitz  # PyMuPDF
