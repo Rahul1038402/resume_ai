@@ -53,7 +53,7 @@ const JobSelector = ({ onJobSelected }: JobSelectorProps) => {
             <div 
               key={job.id}
               className={`flex items-start space-x-3 p-3 rounded-md border transition-colors ${
-                selectedJob === job.id ? "border-resume-primary bg-blue-50" : "border-gray-200 hover:border-gray-300"
+                selectedJob === job.id ? "border-resume-primary dark:text-white bg-blue-50 dark:bg-gray-800" : "border-gray-200 hover:border-gray-500"
               }`}
             >
               <RadioGroupItem value={job.id} id={job.id} className="mt-1" />
@@ -61,7 +61,7 @@ const JobSelector = ({ onJobSelected }: JobSelectorProps) => {
                 <Label 
                   htmlFor={job.id}
                   className={`block text-base font-medium mb-1 cursor-pointer ${
-                    selectedJob === job.id ? "text-resume-primary" : "text-gray-800"
+                    selectedJob === job.id ? "text-resume-primary dark:text-white" : " dark:text-gray-200"
                   }`}
                 >
                   {job.title}

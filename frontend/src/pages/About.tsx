@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 
 const About = () => {
@@ -7,60 +6,41 @@ const About = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-resume-primary mb-4">About ResumeAI</h1>
-            <p className="text-xl text-gray-600">
-              Helping job seekers optimize their resumes with advanced AI
+            <h1 className="text-4xl font-extrabold text-resume-primary dark:text-white mb-4">
+              About ResumeAI
+            </h1>
+            <p className="text-xl text-gray-500 dark:text-gray-400">
+              Empowering job seekers to create smarter resumes with AI-driven insights.
             </p>
           </div>
-          
-          <div className="prose prose-lg max-w-none">
+
+          <div className="prose prose-lg dark:prose-invert prose-headings:text-resume-primary prose-a:text-resume-primary max-w-none">
             <p>
-              ResumeAI is a cutting-edge tool designed to help job seekers optimize their resumes 
-              for specific job positions. Our advanced AI technology analyzes your resume against 
-              job requirements, providing personalized feedback and recommendations to improve 
-              your chances of landing interviews.
+              <strong>ResumeAI</strong> is your intelligent partner in crafting resumes that get noticed.
+              We leverage advanced AI and natural language processing to give your resume a competitive edge—analyzing it against job descriptions, identifying gaps, and suggesting improvements that align with industry expectations.
             </p>
-            
-            <h2>Our Technology</h2>
+
+            <h2 className="mt-12 mb-4 text-2xl font-semibold text-resume-primary dark:text-resume-secondary">How Our Technology Works</h2>
             <p>
-              Our resume analyzer uses Natural Language Processing (NLP) and machine learning 
-              algorithms to extract skills, experience, and other relevant information from 
-              your resume. It then compares this information to the requirements of your target 
-              job position, identifying matches and gaps in your qualifications.
+              Our system uses state-of-the-art machine learning and natural language processing (NLP) to analyze the content of your resume. It extracts core competencies, experience, and keywords, then compares them to your target job’s requirements—highlighting strengths and areas for improvement.
             </p>
-            
-            <h2>How It Works</h2>
+
+            <h2 className="mt-12 mb-4 text-2xl font-semibold text-resume-primary dark:text-resume-secondary">Getting Started</h2>
             <ol>
-              <li>
-                <strong>Upload Your Resume</strong>: Start by uploading your resume in PDF or DOCX format.
-              </li>
-              <li>
-                <strong>Select a Target Job</strong>: Choose the job position you're targeting or get a 
-                general analysis of your resume.
-              </li>
-              <li>
-                <strong>Receive Detailed Analysis</strong>: Get a comprehensive analysis of your resume, 
-                including matched skills, missing skills, and a resume score.
-              </li>
-              <li>
-                <strong>Follow Recommendations</strong>: Use our personalized recommendations to improve 
-                your resume and increase your chances of success.
-              </li>
+              <li><strong>Upload Your Resume</strong>: Upload your resume in PDF or DOCX format for analysis.</li>
+              <li><strong>Select a Job Role</strong>: Choose a specific role you're applying for, or opt for a general review.</li>
+              <li><strong>View Your Resume Insights</strong>: Receive an in-depth report with a resume score, matched and missing skills, and structural feedback.</li>
+              <li><strong>Apply Our Recommendations</strong>: Fine-tune your resume based on personalized, actionable suggestions.</li>
             </ol>
-            
-            <h2>Our Mission</h2>
+
+            <h2 className="mt-12 mb-4 text-2xl font-semibold text-resume-primary dark:text-resume-secondary">Our Mission</h2>
             <p>
-              We believe that every job seeker deserves feedback on their resume to help them 
-              stand out in competitive job markets. Our mission is to make professional resume 
-              analysis accessible to everyone, empowering job seekers to present their best selves 
-              to potential employers.
+              At ResumeAI, we believe that everyone deserves access to smart tools that level the playing field in job applications. Our mission is to democratize resume feedback—making it simple, accessible, and effective for everyone.
             </p>
-            
-            <h2>Privacy Commitment</h2>
+
+            <h2 className="mt-12 mb-4 text-2xl font-semibold text-resume-primary dark:text-resume-secondary">Our Commitment to Your Privacy</h2>
             <p>
-              We take your privacy seriously. Your resume data is securely processed and is never 
-              shared with third parties. Our analysis is performed in real-time, and we do not 
-              store your resume data unless you explicitly opt to save your analysis.
+              Your data stays yours. All resume analyses are processed securely and privately, in real-time. We never store your documents unless you choose to save them for future access. No third-party sharing. No surprises.
             </p>
           </div>
         </div>
